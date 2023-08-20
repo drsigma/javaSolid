@@ -22,9 +22,5 @@ public class Anuenio implements Reajuste{
         return data;
     }
 
-    @Override
-    public BigDecimal ValorIR() {
-        return valor.multiply(new BigDecimal("0.1"));
-    }
 }
 

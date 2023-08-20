@@ -3,7 +3,7 @@ package rh.tributacao;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Promocao implements Reajuste{
+public class Promocao implements Reajuste, ReajusteTributavel{
     private BigDecimal valor;
     private LocalDate data;
 
@@ -23,7 +23,7 @@ public class Promocao implements Reajuste{
     }
 
     @Override
-    public BigDecimal ValorIR() {
+    public BigDecimal valorIR() {
         return BigDecimal.ZERO;
     }
 }
