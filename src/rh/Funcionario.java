@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 
-public class Funcionario {
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
@@ -65,4 +65,6 @@ public class Funcionario {
     public void promover(Cargo novoCargo){
         this.cargo = novoCargo;
     }
+
+    public abstract void promover(BigDecimal novoSalario);
 }
