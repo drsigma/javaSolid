@@ -2,11 +2,13 @@ package rh;
 
 import java.math.BigDecimal;
 
-public class Tercerizado extends Funcionario{
+public class Tercerizado {
 
+    private DadosPessoais dadosPessoais;
     private String empresa;
-    public Tercerizado(String nome, String cpf, Cargo cargo, BigDecimal salario) {
-        super(nome, cpf, cargo, salario);
+    public Tercerizado(String nome, String cpf, Cargo cargo, BigDecimal salario, String empresa) {
+        this.dadosPessoais = new DadosPessoais(nome, cpf, cargo, salario);
+        this.empresa = empresa;
     }
 
     public String getEmpresa() {
@@ -16,14 +18,32 @@ public class Tercerizado extends Funcionario{
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
-
-    @Override
-    public void atualizaSalario(BigDecimal novoSalario){
-
+    public String getNome() {
+        return this.dadosPessoais.getNome();
     }
 
-    @Override
-    public void promover(BigDecimal novoSalario){
-
+    public void setNome(String nome) {
+        this.dadosPessoais.setNome(nome);
     }
+
+    public String getCpf() {
+        return this.dadosPessoais.getCpf();
+    }
+
+    public void setCpf(String cpf) {
+        this.dadosPessoais.setCpf(cpf);
+    }
+
+    public Cargo getCargo() {
+        return this.dadosPessoais.getCargo();
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.dadosPessoais.setCargo(cargo);
+    }
+
+    public BigDecimal getSalario() {
+        return this.dadosPessoais.getSalario();
+    }
+
 }
